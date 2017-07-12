@@ -12,10 +12,60 @@ import Home from './components/Home';
 import Login from './components/Login';
 import Register from './components/Register';
 
-// import './libs/bootstrap.min.css';
 
-const store = configureStore();
+
+
+
+/******
+ *
+ *
+ * We are using localStoarge sync with redux store you can save any reducer state in localStoarge even any propetry of that state and
+ * you will get the always updated state form localStorage ,
+ *
+ * whenever action dispatched then localStoarge and store will be update autometically you dont need to use localStoarge in your component
+ * just map the state with component
+ *
+ *
+ *
+ *
+
+ *****/
+
+
+
+
+export const loadState = () =>{
+    try {
+        const  data = localStorage.getItem('state');
+        if(data === null){
+            return undefined;
+        }
+        return JSON.parse(data);
+    } catch (err) {
+        return undefined;
+
+    }
+}
+
+export const saveState = (state) => {
+    try {
+        localStorage.setItem('state',JSON.stringify(state))
+    } catch (err) {
+
+    }
+}
+
+const persistedState = loadState();
+const store = configureStore(persistedState);
+
+store.subscribe(()=>{
+    saveState({
+        user: store.getState().user
+    });
+})
+
 const history = createHistory();
+
 
 ReactDOM.render(
     <Provider store={store}>

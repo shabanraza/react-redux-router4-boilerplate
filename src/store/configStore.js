@@ -6,15 +6,21 @@ import {  routerMiddleware } from 'react-router-redux';
 import createHistory from 'history/createBrowserHistory'
 import logger from 'redux-logger'
 import reducers from '../reducer/index';
-import { composeWithDevTools } from 'redux-devtools-extension';
-
+import { compose } from 'redux';
+import replicate from 'redux-replicate';
+import localforage from 'redux-replicate-localforage';
 
 export default function configureStore(initialState) {
     const history = createHistory();
     const middleware = routerMiddleware(history);
+    const key = 'Storage';
+    const reducerKeys = true;
+    const replicator = localforage;
+    const replication = replicate({ key, reducerKeys, replicator });
+    const create = compose(replication)(createStore);
     if(process.env.NODE_ENV === 'development') {
-        return createStore(reducers,
-            composeWithDevTools(applyMiddleware(middleware, logger)), initialState);
+        return create(reducers,
+            initialState,applyMiddleware(middleware,logger));
     }else {
         return createStore(reducers,
            applyMiddleware(middleware), initialState);

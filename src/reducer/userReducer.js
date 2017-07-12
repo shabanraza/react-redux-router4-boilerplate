@@ -18,7 +18,7 @@ const initialState= {
 
 const userReducer = createReducer({
     [saveUserData]: (state,payload) => {    console.log(payload)
-        const password = payload.name;
+        const password = payload.password;
         const email = payload.email;
         const username = payload.username;
         return {...state ,email ,password ,username}
