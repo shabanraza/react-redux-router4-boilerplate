@@ -2,39 +2,40 @@ This project was bootstrapped with [Create React App , Redux and router v4](http
 and also included react-Bootstrap.
 
 
-###Development dependency
+### Development dependency
 I have used yarn instead of npm if you dont have yarn install it from below command
 
 ``` npm install -g yarn ```
 
-###Setup
+### Installation
 First you need to clone from below url in your project directory
 
 
 ```
-    git clone https://github.com/shabanraza/react-redux-router4-boilerplate.git
+    $ git clone https://github.com/shabanraza/react-redux-router4-boilerplate.git
 
     $ cd creact-redux-router4-boilerplate/
 
-    yarn install
+    $ yarn install
 ```
 
 
 After installing all dependency hit below command
 
 ```
-yarn start
- ```
+    $ yarn start
+```
 
 Now project is running at localhost:3000
 
-###use yarn for adding module
+### Use yarn instead of npm
 
 ```
-yarn add modulename instead if npm install modulename
+    $ yarn add modulename instead of npm install modulename
 ```
 
-####how to use localStorage with redux-store (synchronization between redux-store and localStorage) using redux-replicate-localforage module
+#### how to use localStorage with redux-store (synchronization between redux-store and localStorage) using redux-replicate-localforage module
+
 Do you want to use localStorage with redux state so whenever action dispatches it will update the redux store as well as localStorage state
 or
 
