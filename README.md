@@ -1,5 +1,5 @@
 This project was bootstrapped with [Create React App , Redux and router v4](https://github.com/facebookincubator/create-react-app).
-and also included react-Bootstrap.
+and also included [react-Bootstrap].
 
 
 ### Development dependency
