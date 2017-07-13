@@ -67,11 +67,11 @@ import Register from './components/Register';
 /******
  *
  *
- * We are using localStoarge sync with redux store you can save any reducer state in localStoarge even any propetry of that state and
- * you will get the always updated state form localStorage ,
- *
- * whenever action dispatched then localStoarge and store will be update autometically you dont need to use localStoarge in your component
- * just map the state with component
+ We are using localStoarge sync with redux store you can save any reducer state in localStoarge even 
+ any propetry of that state and you will get the always updated state form localStorage
+ 
+ whenever action dispatched then localStoarge and store will be update autometically you 
+ dont need to use localStoarge in your component just map the state with component
  *
  *
  *
