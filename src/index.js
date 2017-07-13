@@ -58,6 +58,21 @@ export const saveState = (state) => {
 const persistedState = loadState();
 const store = configureStore(persistedState);
 
+
+/********
+ * 
+ * 
+ *  In store.subscribe method you can save as many reducer state like below
+ *
+         store.subscribe(()=>{
+            saveState({
+                reducerKey : store.getState().reducerKey
+            });
+          })
+ 
+ 
+ ********/
+
 store.subscribe(()=>{
     saveState({
         user: store.getState().user

@@ -2,12 +2,12 @@ This project was bootstrapped with [Create React App , Redux and router v4](http
 and also included react-Bootstrap.
 
 
-###Development dependency
+### Development dependency
 I have used yarn instead of npm if you dont have yarn install it from below command
 
 ``` npm install -g yarn ```
 
-###Setup
+### Installation
 First you need to clone from below url in your project directory
 
 
