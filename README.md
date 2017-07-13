@@ -36,7 +36,7 @@ Now project is running at http://localhost:3000  :+1:
 $ yarn add modulename instead of npm install modulename
 ```
 
-### how to use localStorage with redux-store (synchronization between redux-store and localStorage) using redux-replicate-localforage module
+#### How to use localStorage with redux-store (synchronization between redux-store and localStorage) using redux-replicate-localforage module
 
  Do you want to use **localStorage** with redux state so whenever action dispatches it will update the redux store as well as localStorage state
 or
